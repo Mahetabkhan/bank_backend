@@ -10,11 +10,13 @@ app.use(cors({
   origin: 'http://localhost:5173',
   credentials: true
 }));
+
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+  app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
-    res.send('Hello World! Mahetab khan')
+  res.send('Hello World! Mahetab khan')
+  
 })
 
 app.use('/bank',account_holder_router)
